@@ -6,7 +6,7 @@ export default function TotalsScreen() {
 
         <SafeAreaView>
             <View>
-                <Text>Application</Text>
+                <Text>Application again</Text>
             </View>
         </SafeAreaView>
     );
