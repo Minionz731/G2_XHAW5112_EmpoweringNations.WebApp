@@ -7,6 +7,7 @@ import ShortTotal from './TotalsScreens/short_total';
 export default function TotalsScreen() {
     const [selectedOption, setSelectedOption] = React.useState('Long');
     return (
+        //update
 
         <SafeAreaView>
             <View>
