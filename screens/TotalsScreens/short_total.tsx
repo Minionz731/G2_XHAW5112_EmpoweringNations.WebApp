@@ -7,7 +7,7 @@ export default function ShortTotal() {
 
         <SafeAreaView>
             <View style = {styles.page}>
-                <Text>Long Total</Text>
+                <Text>short Total</Text>
              
             </View>
         </SafeAreaView>
