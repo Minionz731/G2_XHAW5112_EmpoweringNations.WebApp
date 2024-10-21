@@ -1,38 +1,99 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
+import { RadioButton } from 'react-native-paper';
+
+
 
 export default function LongTotal() {
+
+    const data = [{
+        name: "Cleaning"
+    },
+    {
+        name: "Washing"
+    },
+    {
+        name: "Paintinf"
+    },
+    {
+        name: "Paintinf"
+    },
+
+    ]
+
+
     return (
-        <SafeAreaView style={styles.page}>
-            <View>
-                <Text style={styles.text}>Long Total</Text>
+        <SafeAreaView >
+            <View style={styles.page}>
+
+
+                {
+                    data.map((item) => {
+
+                        return <View style={styles.card}>
+                            <Image style={styles.image} source={require('../../images/study1.jpg')} />
+                            <Text>{item.name}</Text>
+                            <View style={styles.radio}>
+                                <RadioButton
+                                    value="first"
+                                    status={"checked"}
+                                    onPress={() => { }}
+                                />
+                            </View>
+                        </View>
+
+                    })}
+
+
+
+
+
+
+
+
             </View>
         </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
-    page: {
-        height: '80%',
-        padding: 20,
-        margin: 15,
-        borderRadius: 10, // Rounded corners
-        shadowColor: '#000', // Add shadow for depth
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.8,
-        shadowRadius: 2,
-        elevation: 5, // Android shadow
-        justifyContent: 'center',
-        backgroundColor: 'lightyellow', // Background color
+    image: {
+        height: 80,
+        width: 80,
+        borderRadius: 10,
+        margin: 10
     },
+
+
+    card: {
+        backgroundColor: 'white',
+        height: 100,
+        borderRadius: 20,
+        marginHorizontal: 10,
+        marginVertical: 10,
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between"
+    },
+
+    page: {
+        height: '95%',
+        backgroundColor: 'yellow',
+    },
+
     text: {
         fontSize: 22,
-        fontWeight: '600', // Bold text
+        fontWeight: '600',
         color: 'black',
         textAlign: 'center',
-        letterSpacing: 1.2, // Add letter spacing
+        letterSpacing: 1.2,
         marginBottom: 20,
     },
+
+    radio: {
+        marginHorizontal: 20
+    }
 });
 
-  
+
