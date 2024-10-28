@@ -15,7 +15,9 @@ export default function CoursesScreen() {
 
     return (
         <SafeAreaView style = {styles.space}>
-            <Header></Header>
+            <Header
+            title='Courses'
+            ></Header>
             <View>
                 <GroupedButtonsShortLong
                     selectedOption={selectedOption}

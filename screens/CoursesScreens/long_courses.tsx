@@ -18,9 +18,9 @@ export default function Long() {
     const [price, setPrice] = React.useState('');
 
     const study1Image = require('../../images/study2.png');
-    const study2Image = require('../../images/study1.jpg');
-    const study3Image = require('../../images/study1.jpg');
-    const study4Image = require('../../images/study1.jpg');
+    const study2Image = require('../../images/study3.png');
+    const study3Image = require('../../images/study4.png');
+    const study4Image = require('../../images/study5.png');
 
     const LongData = [
         {

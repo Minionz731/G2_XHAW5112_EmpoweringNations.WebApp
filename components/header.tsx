@@ -1,7 +1,13 @@
 import * as React from 'react'
 import { StyleSheet, Text, View, SafeAreaView, Button, Image } from 'react-native';
 
-export default function Header() {
+interface HeaderProps {
+    title : string
+}
+
+export default function Header({title} :HeaderProps) {
+
+
 
 
     return (
@@ -9,10 +15,10 @@ export default function Header() {
 
             <View style={styles.container}>
 
-                <Image style={styles.image} source={require('../images/study1.jpg')} />
+                <Image style={styles.image} source={require('../images/logo.jpg')} />
 
                 <View style={styles.textView}>
-                    <Text style={styles.text}> Courses</Text>
+                    <Text style={styles.text}> {title}</Text>
                 </View>
 
 

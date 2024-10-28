@@ -2,12 +2,49 @@ import * as React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
 import { RadioButton } from 'react-native-paper';
 
-export default function ShortTotal() {
+interface numberProp {
+    setChecked5: (value: boolean) => void;
+    setChecked6: (value: boolean) => void;
+    setChecked7: (value: boolean) => void;
+  
+    isChecked5: boolean;
+    isChecked6: boolean;
+    isChecked7: boolean;
+   
+}
+
+export default function ShortTotal({ setChecked5, setChecked6, setChecked7, isChecked5,isChecked6,isChecked7}: numberProp) {
+
+  
+
+    const study1Image = require('../../images/study6.png');
+    const study2Image = require('../../images/study7.png');
+    const study3Image = require('../../images/study8.png');
+
+  
     const data = [
-        { name: "Child Minding" },
-        { name: "Cooking" },
-        { name: "Garden Maintenance" },
-        
+        {
+            name: "Child Minding",
+            image: study1Image,
+            price: 750,
+            value: isChecked5,
+            setChecked: () => setChecked5(!isChecked5),
+        },
+        {
+            name: "Cooking",
+            image: study2Image,
+            price: 750,
+            value: isChecked6,
+            setChecked: () => setChecked6(!isChecked6),
+        },
+        {
+            name: "Garden Maintenance",
+            image: study3Image,
+            price: 750,
+            value: isChecked7,
+            setChecked: () => setChecked7(!isChecked7),
+        },
+
     ];
 
     return (
@@ -15,13 +52,13 @@ export default function ShortTotal() {
             <View style={styles.page}>
                 {data.map((item, index) => (
                     <View key={index} style={styles.card}>
-                        <Image style={styles.image} source={require('../../images/study1.jpg')} />
+                        <Image style={styles.image} source={item.image} />
                         <Text>{item.name}</Text>
                         <View style={styles.radio}>
                             <RadioButton
-                                value="first"
-                                status={"checked"}
-                                onPress={() => { }}
+                                value={item.name}
+                                status={item.value ? 'checked' : 'unchecked'}
+                                onPress={item.setChecked}
                             />
                         </View>
                     </View>

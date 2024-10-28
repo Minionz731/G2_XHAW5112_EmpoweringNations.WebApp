@@ -16,9 +16,9 @@ export default function Short() {
     const [price, setPrice] = React.useState('');
 
 
-    const study1Image = require('../../images/study1.jpg');
-    const study2Image = require('../../images/study1.jpg');
-    const study3Image = require('../../images/study1.jpg');
+    const study1Image = require('../../images/study6.png');
+    const study2Image = require('../../images/study7.png');
+    const study3Image = require('../../images/study8.png');
 
 
 
