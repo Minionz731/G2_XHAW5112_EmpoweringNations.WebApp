@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
 import { RadioButton } from 'react-native-paper';
+//better
 
 
 

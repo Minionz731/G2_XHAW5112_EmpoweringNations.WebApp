@@ -6,13 +6,16 @@ import GroupedButtons from '../components/grouped_buttons_home';
 import GroupedButtonsShortLong from '../components/grouped_buttons_short_long';
 import Short from './CoursesScreens/short_courses';
 import Long from './CoursesScreens/long_courses';
+import Header from '../components/header';
+
 
 export default function CoursesScreen() {
 
     const [selectedOption, setSelectedOption] = React.useState('Long');
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style = {styles.space}>
+            <Header></Header>
             <View>
                 <GroupedButtonsShortLong
                     selectedOption={selectedOption}
@@ -26,3 +29,9 @@ export default function CoursesScreen() {
 
     );
 }
+
+const styles = StyleSheet.create({
+    space: {
+        marginTop : 30
+    }
+})

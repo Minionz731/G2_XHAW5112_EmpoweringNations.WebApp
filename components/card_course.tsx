@@ -6,22 +6,23 @@ interface CourseCardProps {
     duration: string;
     description: string;
     onPress: () => void;
-  }
+    image : any
+}
 
 
-  const CourseCard: React.FC<CourseCardProps> = ({ name, duration, description, onPress }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ name, duration, description, onPress, image }) => {
     return (
         <View style={style.container}>
             <Text style={style.textHead}>{name}</Text>
 
             <View style={style.row}>
-                <Image style={style.image} source={require('../images/study1.jpg')} />
+                <Image style={style.image} source={image} />
                 <View style={style.textText}>
-                    <Text>Duration : {duration}</Text>
-                    <Text>Long Course</Text>
+                    <Text style={style.description}>Duration : {duration}</Text>
+                    <Text style={style.description}>{description}</Text>
 
                     <TouchableOpacity style={style.button}>
-                        <Text style={style.buttonText}> touch</Text>
+                        <Text style={style.buttonText} onPress={onPress}> Details</Text>
                     </TouchableOpacity>
 
                 </View>
@@ -35,10 +36,18 @@ interface CourseCardProps {
 const style = StyleSheet.create({
     container: {
         height: 190,
-        width: "90%",
+        width: "100%",
         marginVertical: 10,
         backgroundColor: "white",
         borderRadius: 20,
+
+        elevation: 5
+
+    },
+
+    description: {
+        marginVertical: 5,
+        textAlign: "center"
     },
 
     image: {
@@ -50,7 +59,8 @@ const style = StyleSheet.create({
     },
     textHead: {
         textAlign: "center",
-        marginVertical: 10
+        marginVertical: 10,
+        fontWeight: "bold"
     },
 
     row: {
