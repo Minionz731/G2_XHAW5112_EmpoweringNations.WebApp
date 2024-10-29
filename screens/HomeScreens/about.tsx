@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
-
+// Author : Meta
+// Link : https://reactnative.dev/
 export default function About() {
     return (
 
@@ -18,6 +19,7 @@ export default function About() {
                     Her training equips domestic workers and gardeners with valuable skills,
                      making them more competitive for higher-paying jobs and enabling them to start their own small businesses. 
                      Many employers also appreciate having more skilled workers who can offer enhanced services at home.
+
 
                 </Text>
             </View>

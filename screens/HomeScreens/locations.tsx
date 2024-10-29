@@ -1,6 +1,11 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import MapView, { UrlTile, Marker } from 'react-native-maps';
+// Author : Meta
+// Link : https://reactnative.dev/
+
+// Author : sharmilajesupaul
+// Link : https://www.npmjs.com/package/react-native-maps
 
 export default function App() {
 

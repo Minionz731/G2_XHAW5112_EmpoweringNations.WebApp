@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Linking } from 'react-native';
-
+// Author : Meta
+// Link : https://reactnative.dev/
 export default function Contact() {
     const handleEmailPress = () => {
        
