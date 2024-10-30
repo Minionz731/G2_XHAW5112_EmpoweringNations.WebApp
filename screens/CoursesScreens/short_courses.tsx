@@ -5,7 +5,8 @@ import BottomSheet, { BottomSheetBackdrop, BottomSheetView } from '@gorhom/botto
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Details from './details_screen';
 
-
+// Author : Meta
+// Link : https://reactnative.dev/
 export default function Short() {
 
     const [name, setName] = React.useState('');
@@ -19,7 +20,7 @@ export default function Short() {
     const study1Image = require('../../images/study6.png');
     const study2Image = require('../../images/study7.png');
     const study3Image = require('../../images/study8.png');
-
+   // (Stockcake,2024)
 
 
 

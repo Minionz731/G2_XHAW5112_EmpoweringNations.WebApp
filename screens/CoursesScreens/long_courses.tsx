@@ -6,7 +6,8 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Details from './details_screen';
 
 
-
+// Author : Meta
+// Link : https://reactnative.dev/
 export default function Long() {
 
 
@@ -21,6 +22,7 @@ export default function Long() {
     const study2Image = require('../../images/study3.png');
     const study3Image = require('../../images/study4.png');
     const study4Image = require('../../images/study5.png');
+    // (Stockcake,2024)
 
     const LongData = [
         {

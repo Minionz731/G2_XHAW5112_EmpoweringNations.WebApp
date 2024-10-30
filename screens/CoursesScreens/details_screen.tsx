@@ -1,5 +1,7 @@
 import * as React from 'react'
 import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
+// Author : Meta
+// Link : https://reactnative.dev/
 
 interface DetailsInterface {
     name: string,
